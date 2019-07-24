@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\JSS.DomainDrivenDesign.Domain\JSS.DomainDrivenDesign.Domain.csproj" />
+    <ProjectReference Include="..\JSS.DomainDrivenDesign.Infraestructure.Data\JSS.DomainDrivenDesign.Infraestructure.Data.csproj" />
+  </ItemGroup>
+
+</Project>
