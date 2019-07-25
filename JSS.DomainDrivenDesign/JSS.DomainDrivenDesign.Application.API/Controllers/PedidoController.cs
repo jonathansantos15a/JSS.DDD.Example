@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using JSS.DomainDrivenDesign.Domain.Entities;
+using JSS.DomainDrivenDesign.Service.Interfaces;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -11,16 +13,25 @@ namespace JSS.DomainDrivenDesign.Application.API.Controllers
     [ApiController]
     public class PedidoController : ControllerBase
     {
-        [HttpGet("consultarPorId/{id}")]
-        public ActionResult<string> BuscarPorId(int pedidoId)
+        private readonly IPedidoService _pedidoService;
+
+        public PedidoController(IPedidoService pedidoService)
         {
-            return "value";
+            _pedidoService = pedidoService;
         }
 
+        [HttpGet("consultarPorId/{id}")]
+        public ActionResult<Pedido> BuscarPorId(int pedidoId)
+        {
+            Pedido pedido = _pedidoService.BuscarPorId(pedidoId);
+
+            return pedido;
+        }
 
         [HttpPost("concluirPedido")]
-        public void ConcluirPedido([FromBody] string value)
+        public void Concluir([FromBody] int pedidoId)
         {
+            _pedidoService.ConcluirPedido(pedidoId);
         }
 }
 }

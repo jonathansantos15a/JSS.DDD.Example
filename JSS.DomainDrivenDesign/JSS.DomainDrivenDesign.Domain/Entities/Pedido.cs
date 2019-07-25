@@ -21,7 +21,7 @@ namespace JSS.DomainDrivenDesign.Domain.Entities
             this.Status = PedidoStatus.Concluído;
         }
 
-        public void CancelarPedido()
+        public void Cancelar()
         {
             this.Status = PedidoStatus.Cancelado;
         }
