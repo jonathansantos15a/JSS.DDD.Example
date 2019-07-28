@@ -31,7 +31,7 @@ namespace JSS.DomainDrivenDesign.Application.API.Controllers
         [HttpPost("concluirPedido")]
         public void Concluir([FromBody] int pedidoId)
         {
-            _pedidoService.ConcluirPedido(pedidoId);
+            _pedidoService.Concluir(pedidoId);
         }
 }
 }

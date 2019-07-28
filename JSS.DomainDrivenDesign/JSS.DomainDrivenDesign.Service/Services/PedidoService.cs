@@ -10,7 +10,7 @@ namespace JSS.DomainDrivenDesign.Service.Services
     {
         #region Comportamentos
 
-        public void ConcluirPedido(Int64 pedidoId)
+        public void Concluir(Int64 pedidoId)
         {
             IPedidoRepository pedidoRepository = new PedidoRepository();
 

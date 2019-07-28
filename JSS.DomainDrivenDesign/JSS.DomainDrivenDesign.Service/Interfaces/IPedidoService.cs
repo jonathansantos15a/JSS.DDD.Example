@@ -7,7 +7,7 @@ namespace JSS.DomainDrivenDesign.Service.Interfaces
 {
     public interface IPedidoService
     {
-        void ConcluirPedido(Int64 pedidoId);
+        void Concluir(Int64 pedidoId);
 
         Pedido BuscarPorId(Int64 pedidoId);
     }
